@@ -11,7 +11,7 @@ D = sqrt(u.^2 + v.^2);  % Khoảng cách từ mỗi điểm đến trung tâm
 H = 1 ./ (1 + (D ./ D0).^(2 * n));
 
 % Nhập ảnh đầu vào (không cắt)
-image = imread('textImg.jpg');     % Thay 'your_image.jpg' bằng tên ảnh của bạn
+image = imread('textImg.jpg');     
 image = im2uint8(rgb2gray(image));   % Chuyển ảnh sang grayscale và kiểu double
 [height, width] = size(image);
 
@@ -49,5 +49,4 @@ end
 
 % Hiển thị các ảnh riêng biệt
 figure; imshow(image); title('Ảnh gốc');
-figure; imshow(h, []); title('h_r');
 figure; imshow(compressed_image, []); title('Ảnh nén');
